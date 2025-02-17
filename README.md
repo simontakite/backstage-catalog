@@ -1,0 +1,2 @@
+# backstage-catalog
+Test catalog
