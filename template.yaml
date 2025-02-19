@@ -43,7 +43,7 @@ spec:
       action: publish:github
       input:
         allowedHosts: ["github.com"]
-        repoUrl: github.com/simontakite/${{ parameters.component_id }}
+        repoUrl: github.com?repo=${{ parameters.component_id }}&owner=simontakite
         defaultBranch: main
         repoVisibility: public
 
