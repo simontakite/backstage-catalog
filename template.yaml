@@ -38,8 +38,7 @@ spec:
         url: ./skeleton
         targetPath: ./
         values:
-          name: ${{ parameters.component_id }}
-          owner: ${{ parameters.owner }}
+          repoUrl: github.com?repo=${{ parameters.component_id }}&owner=simontakite
 
     - id: publish
       name: Publish to GitHub
