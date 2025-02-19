@@ -1,31 +1,61 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
-# some metadata about the template itself
 metadata:
-  name: hello-world
-  title: Hello World
-  description: scaffolder Hello, World template demo
+  name: my-backstage-template
+  title: "Go Service Template"
+  description: "Creates a new Go service with a Helm chart"
+  tags:
+    - go
+    - kubernetes
+    - helm
 spec:
-  owner: backstage/techdocs-core
+  owner: platform-team
   type: service
 
   parameters:
-    - title: Fill in some steps
-      required:
-        - name
+    - title: "Service Details"
+      required: ["component_id", "owner", "description"]
       properties:
-        name:
-          title: Name
+        component_id:
+          title: "Service Name"
           type: string
-          description: Name of new project
-          ui:autofocus: true
-          ui:options:
-            rows: 5
+          description: "Enter the name of the service"
+          pattern: "^[a-zA-Z0-9_-]+$"
+        owner:
+          title: "Owner"
+          type: string
+          description: "Team responsible for this service"
+        description:
+          title: "Description"
+          type: string
+          description: "Short description of the service"
 
-  # here's the steps that are executed in series in the scaffolder backend
   steps:
-    - id: log-message
-      name: Log Message
-      action: debug:log
+    - id: fetch-template
+      name: Fetch Skeleton Template
+      action: fetch:template
       input:
-        message: "Hello, ${{ parameters.name }}"
+        url: ./skeleton
+        targetPath: ./workspace
+
+    - id: rename-files
+      name: Rename Files
+      action: roadiehq:utils:rename
+      input:
+        files:
+          - from: "skeleton/main.go"
+            to: "workspace/${{ parameters.component_id }}/main.go"
+
+    - id: publish
+      name: Publish to GitHub
+      action: publish:github
+      input:
+        allowedHosts: ["github.com"]
+        repoUrl: github.com/simontakite/${{ parameters.component_id }}
+        defaultBranch: main
+        repoVisibility: private
+
+  output:
+    links:
+      - title: "Repository"
+        url: ${{ steps.publish.output.remoteUrl }}
