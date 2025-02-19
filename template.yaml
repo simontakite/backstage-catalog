@@ -38,14 +38,6 @@ spec:
         url: ./skeleton
         targetPath: ./workspace
 
-    - id: rename-files
-      name: Rename Files
-      action: roadiehq:utils:rename
-      input:
-        files:
-          - from: "skeleton/main.go"
-            to: "workspace/${{ parameters.component_id }}/main.go"
-
     - id: publish
       name: Publish to GitHub
       action: publish:github
