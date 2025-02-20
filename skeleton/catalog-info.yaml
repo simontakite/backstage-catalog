@@ -1,14 +1,3 @@
-#apiVersion: backstage.io/v1alpha1
-#kind: Component
-#metadata:
-#  name: my-backstage-template
-#  annotations:
-#    backstage.io/techdocs-ref: dir:.
-#spec:
-#  type: service
-#  lifecycle: experimental
-#  owner: platform-team
----
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
