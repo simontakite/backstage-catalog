@@ -8,14 +8,17 @@
 #  type: service
 #  lifecycle: experimental
 #  owner: platform-team
+---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ${{ values.name | dump }}
+  name: ${{values.component_id | dump}}
+  {%- if values.description %}
+  description: ${{values.description | dump}}
+  {%- endif %}
   annotations:
-    github.com/project-slug: ${{values.destination.repoUrl}}
     backstage.io/techdocs-ref: dir:.
 spec:
-  type: service
+  type: website
   lifecycle: experimental
-  owner: platform-team
+  owner: ${{values.owner | dump}}
