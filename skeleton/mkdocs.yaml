@@ -1,4 +1,4 @@
-site_name: ${{values.component_id | dump}} Documentation
+site_name: '${{values.component_id | dump}} Documentation'
 
 nav:
   - Home: index.md
