@@ -7,7 +7,12 @@ metadata:
   {%- endif %}
   annotations:
     backstage.io/techdocs-ref: dir:.
+  tags:
+    - go
+    - helm
+    - service
 spec:
   type: website
   lifecycle: experimental
   owner: ${{values.owner | dump}}
+  system: microservice
