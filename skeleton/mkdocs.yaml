@@ -5,3 +5,6 @@ nav:
 
 plugins:
   - techdocs-core
+
+repo_url: https://github.com/simontakite/go-app/tree/main/ 
+edit_uri: https://github.com/simontakite/go-app/edit/main/docs
