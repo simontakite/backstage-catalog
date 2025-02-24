@@ -36,19 +36,19 @@ nav:
 # Theme
 theme:
   name: mkdocs
-  # font:
-  #   text: IBM Plex Sans
-  #   code: IBM Plex Mono
-  # icon:
-  #   logo: material/library
-  # features:
-  #   # - navigation.tabs
-  #   - navigation.instant
-  #   - navigation.expand
-  # palette:
-  #   scheme: default
-  #   primary: blue
-  #   accent: blue
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  icon:
+    logo: material/library
+  features:
+    # - navigation.tabs
+    - navigation.instant
+    - navigation.expand
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
 
 # Plugins
 plugins:
