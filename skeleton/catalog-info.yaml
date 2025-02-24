@@ -7,10 +7,15 @@ metadata:
   {%- endif %}
   annotations:
     backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: simontakite/${{ values.component_id | trim }}
   tags:
     - go
     - helm
     - service
+  links:
+    - url: https://github.com/simontakite/${{ values.component_id | trim }}
+      title: ${{ values.component_id | trim }} app
+      icon: dashboard
 spec:
   type: website
   lifecycle: experimental
