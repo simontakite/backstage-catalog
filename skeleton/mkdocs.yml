@@ -16,7 +16,7 @@ site_url: https://github.com/simontakite/${{ values.component_id | trim }}
 site_author: Maintainers
 
 # Repository
-repo_name: go-app
+repo_name: ${{ values.component_id | trim }}
 #repo_url: https://github.com/[YOUR_GITHUB_ID]/[YOUR-REPOSITORY-NAME]
 repo_url: https://github.com/simontakite/${{ values.component_id | trim }}
 #edit_uri: edit/master/[YOU-DOCUMENTATION_FOLDER]
