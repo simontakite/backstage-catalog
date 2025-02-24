@@ -12,15 +12,15 @@
 ---
 # Project information
 site_name: '${{values.component_id | dump}} Documentation'
-site_url: https://github.com/simontakite/${{values.component_id | dump}}
+site_url: https://github.com/simontakite/${{values.component_id | trim}}
 site_author: Maintainers
 
 # Repository
 repo_name: go-app
 #repo_url: https://github.com/[YOUR_GITHUB_ID]/[YOUR-REPOSITORY-NAME]
-repo_url: https://github.com/simontakite/${{values.component_id | dump}}
+repo_url: https://github.com/simontakite/${{values.component_id | trim}}
 #edit_uri: edit/master/[YOU-DOCUMENTATION_FOLDER]
-edit_uri: https://github.com/simontakite/${{values.component_id | dump}}/edit/main/docs
+edit_uri: https://github.com/simontakite/${{values.component_id | trim}}/edit/main/docs
 docs_dir: docs
 
 # Navigation
