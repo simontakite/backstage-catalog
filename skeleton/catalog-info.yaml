@@ -1,9 +1,9 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ${{values.component_id | dump}}
+  name: ${{ values.component_id | trim }}
   {%- if values.description %}
-  description: ${{values.description | dump}}
+  description: ${{ values.description | trim }}
   {%- endif %}
   annotations:
     backstage.io/techdocs-ref: dir:.
@@ -14,5 +14,5 @@ metadata:
 spec:
   type: website
   lifecycle: experimental
-  owner: ${{values.owner | dump}}
+  owner: ${{ values.owner | trim }}
   system: microservice

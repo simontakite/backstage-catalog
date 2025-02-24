@@ -14,3 +14,70 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs-material
       - run: mkdocs gh-deploy --force
+
+---
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    name: Build Application
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set Up Node.js
+        run: echo "setting up code .."
+
+      - name: Install Dependencies
+        run: echo "installing dependencies .."
+
+      - name: Build Project
+        run: echo "building project .."
+
+  test:
+    name: Run Tests
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set Up Node.js
+        run: echo "setting up node .. "
+
+      - name: Install Dependencies
+        run: echo "installing dependencies .."
+
+      - name: Run Tests
+        run: echo "running tests .."
+
+  security_scan:
+    name: Security Scan
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Security Scan (Snyk)
+        run: echo "running security scan .."
+
+  deploy:
+    name: Deploy Application
+    needs: [test, security_scan]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Server
+        run: echo "Deploying application..."
+
