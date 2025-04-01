@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: go-service-template
-  title: "Go Service Template"
+  title: "Create Go Service"
   description: "Creates a new Go service with a Helm chart"
   tags:
     - go
