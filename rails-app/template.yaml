@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: rails-demo
-  title: Rails App Template
+  title: Create Rails App
   description: scaffolds a classic Rails app
 spec:
   owner: backstage/techdocs-core
