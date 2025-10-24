@@ -9,7 +9,7 @@ metadata:
     - kubernetes
     - helm
 spec:
-  owner: platform-team
+  owner: platform-engineering
   type: service
   system: microservice
 

@@ -16,8 +16,11 @@ metadata:
     - url: https://github.com/simontakite/${{ values.component_id | trim }}
       title: ${{ values.component_id | trim }} app
       icon: dashboard
+    - url: https://example.com/docs/${{ values.component_id | trim }}
+      title: Documentation
+      icon: book
 spec:
-  type: website
+  type: service
   lifecycle: experimental
   owner: ${{ values.owner | trim }}
   system: microservice

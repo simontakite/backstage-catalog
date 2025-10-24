@@ -5,7 +5,7 @@ metadata:
   title: Create Rails App
   description: scaffolds a classic Rails app
 spec:
-  owner: backstage/techdocs-core
+  owner: platform-engineering
   type: service
 
   parameters:
