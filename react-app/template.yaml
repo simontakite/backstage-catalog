@@ -52,6 +52,7 @@ spec:
       action: fetch:template
       input:
         url: ./skeleton
+        cookiecutterCompat: true
         copyWithoutRender:
           - .github/workflows/*
         values:

@@ -43,6 +43,7 @@ spec:
       input:
         url: ./skeleton
         targetPath: ./
+        cookiecutterCompat: true
         values:
           component_id: ${{ parameters.component_id }}
           description: ${{ parameters.description }}
