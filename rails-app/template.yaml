@@ -124,7 +124,6 @@ spec:
       action: fetch:rails
       input:
         url: ./template
-        cookiecutterCompat: true
         values:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}      
