@@ -3,7 +3,8 @@ kind: Template
 metadata:
   name: go-service-template
   title: "Create Go Service"
-  description: "Creates a new Go service with a Helm chart"
+  description: |
+    Scaffold a new Go microservice with Kubernetes and Helm support.
   tags:
     - go
     - kubernetes

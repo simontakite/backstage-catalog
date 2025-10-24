@@ -3,7 +3,11 @@ kind: Template
 metadata:
   name: rails-demo
   title: Create Rails App
-  description: scaffolds a classic Rails app
+  description: |
+    Scaffold a new Ruby on Rails application
+  tags:
+    - ruby
+    - rails
 spec:
   owner: platform-engineering
   type: service

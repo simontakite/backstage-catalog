@@ -3,10 +3,12 @@ kind: Template
 metadata:
   name: create-react-app-template
   title: Create React App
-  description: Create a new CRA website project
+  description: |
+    Scaffold a new React application using Create React App.
   tags:
     - react
     - cra
+    - javascript
 spec:
   owner: platform-engineering
   type: website
