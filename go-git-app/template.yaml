@@ -24,9 +24,13 @@ spec:
           description: "Enter the name of the service"
           pattern: "^[a-zA-Z0-9_-]+$"
         owner:
-          title: "Owner"
+          title: Owner
           type: string
-          description: "Team responsible for this service"
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
         description:
           title: "Description"
           type: string
