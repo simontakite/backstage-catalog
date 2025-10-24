@@ -48,7 +48,7 @@ spec:
       name: Publish to GitHub
       action: publish:github
       input:
-        allowedHosts: ["github.com"]
+        #allowedHosts: ["github.com"]
         repoUrl: github.com?repo=${{ parameters.component_id }}&owner=simontakite
         defaultBranch: main
         repoVisibility: public
